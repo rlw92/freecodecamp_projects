@@ -2,7 +2,11 @@ import numpy as np
 
 def calculate(list):
 
-    arr = np.array(list)
+ arr = np.array(list)
+
+ if arr.size < 9:
+    raise ValueError("List must contain nine numbers.")
+ else:  
     matrix = arr.reshape(3,3)
 
 #mean
